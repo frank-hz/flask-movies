@@ -1,0 +1,133 @@
+:root {
+    --primary: #1850c9;
+    --dark: #011627;
+    --blank: #f2f5f8;
+    --font: #111828;
+    --border: rgba(199, 207, 230, .6);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background: var(--blank);
+    color: var(--font);
+}
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 60px auto 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        'header'
+        'tabs'
+        'content';
+    
+}
+.header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 3rem;
+    border-bottom: 1px solid var(--border);
+    
+} 
+.logo {
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--dark);
+    color: var(--primary);
+    outline: none;
+    border: none;
+}
+.logo span {
+    color: var(--primary);
+    color: var(--dark);
+    margin-left: 2px;
+    font-weight: 600;
+}
+.menu {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    
+}
+.menu-item a {
+    display: inline-block;
+    text-align: center;
+    padding: .4rem;
+    margin: 0 3px;
+    text-decoration: none;
+    color: var(--font);
+    font-weight: 500;
+}
+.menu-item a:hover {
+    color: var(--primary);
+}
+.menu-tab {
+    grid-area: tabs;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tab {
+    display: inline-block;
+    text-decoration: none;
+    padding: .8rem 1rem;
+    text-align: center;
+    cursor: pointer;
+    font-size: .98rem;
+    font-weight: 500;
+    transition: all .2s ease;
+}
+.tab:hover {
+    color: var(--primary);
+}
+.tab-active {
+    background: var(--primary);
+    color: var(--blank);
+}
+.tab-active:hover {
+    color: #f2f5f8;
+}
+.content {
+    grid-area: content;
+    padding: 1rem 2rem;
+}
+
+/* .btn {
+    outline: none;
+    border: none;
+    display: inline-block;
+    text-align: center;
+    font-size: .9rem;
+    line-height: 1rem;
+    font-weight: 600;
+    letter-spacing: .2px;
+    padding: .6rem .8rem;
+    height: 38px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid rgba(177, 195, 210, .8);
+    color: #4A5568;
+    background: #fff;
+    margin: 1px 1px;
+    transition: all .2s ease;
+}
+.btn:hover {
+    border: 1px solid rgba(177, 195, 210, 1);
+    color: #2D3748;
+} */
+
+
+
+
+

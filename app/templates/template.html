@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/Roboto/roboto.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+    <script src="{{ url_for('static', filename='js/tailwind.js')}}"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <a href="" class="logo">
+                Flask<span>Movies</span>
+            </a>
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="">User</a>
+                </li>
+                <li class="menu-item">
+                    <a href="">Config</a>
+                </li>
+                <li class="menu-item">
+                    <a href="">Exit</a>
+                </li>
+            </ul>
+        </header>
+        <div class="menu-tab">
+            <div class="tab tab-active">Movies</div>
+            <div class="tab">Series</div>
+            <div class="tab">Music</div>
+        </div>
+        <div class="content">
+            {% block content %} {% endblock %}
+        </div>
+    </div>
+</body>
+</html>
